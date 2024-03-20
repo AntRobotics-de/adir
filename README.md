@@ -19,11 +19,13 @@ sudo dpkg -i ros-humble-adir-can-commands_0.0.0-0jammy_amd64.deb
 ```
 
 
-## Usage
+## Run
 
 To start using Adir, you can use the following command:
 
 ```bash
-ros2 launch adir_can_copmmands adir_interface_launch.py
+ros2 launch adir_can_commands adir_interface_launch.py
 ```
+
+To start moving it, we can publish forward and angular velocities from the terminal on ros2 topic ''' /cmd_cel'''
 
