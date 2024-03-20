@@ -37,6 +37,6 @@ To start moving it, we can publish forward and angular velocities from the termi
 chmod +x adir.sh
 sudo ./adir.sh
 ```
-          Once succesfully run, then we can launch the run files.
+Once succesfully run, then we can launch the run files.
 
 - If using CAN by connecting to the given port on ADIR and CAN bus is up & running, then we can straight away launch the scripts.
