@@ -27,5 +27,14 @@ To start using Adir, you can use the following command:
 ros2 launch adir_can_commands adir_interface_launch.py
 ```
 
-To start moving it, we can publish forward and angular velocities from the terminal on ros2 topic ''' /cmd_cel'''
+To start moving it, we can publish forward and angular velocities from the terminal or scripts on ros2 topic ' /cmd_cel  '
 
+## Additional information
+
+If using USB cable, please download the adir.sh bash script first and run it using the following commands: 
+
+```bash
+chmod +x adir.sh
+sudo ./adir.sh
+```
+Once succesfully run, then we can launch the run files.
