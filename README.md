@@ -19,4 +19,11 @@ sudo dpkg -i ros-humble-adir-can-commands_0.0.0-0jammy_amd64.deb
 ```
 
 
-### Step 1: Update and Upgrade Your System
+## Usage
+
+To start using Adir, you can use the following command:
+
+```bash
+ros2 launch adir_can_copmmands adir_interface_launch.py
+```
+
