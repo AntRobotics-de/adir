@@ -39,4 +39,4 @@ sudo ./adir.sh
 ```
   Once succesfully run, then we can launch the run files.
 
-- If using CAN by connecting to the given port on ADIR and CAN bus is up & running, then we can straight away launch the scripts.
+- If using CAN by connecting to the given port on ADIR and CAN bus is up & running, then we can straight away launch the scripts. Please note that the bit rate is currently set at 500kbps.
