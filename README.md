@@ -11,6 +11,8 @@ Welcome to the official repository for Adir, the differential drive robot design
 - [Running Adir](#running-adir)
   - [Environment Setup](#environment-setup)
   - [Launching Adir](#launching-adir)
+- [Additional information](#additional-information)
+  - [Debug information](#debug-information)
 
 
 
@@ -72,4 +74,4 @@ ros2 launch odometry test.launch.py
 
 ## Additional information
 
-
+### Debug information
