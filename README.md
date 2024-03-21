@@ -29,6 +29,21 @@ ros2 launch adir_can_commands adir_interface_launch.py
 
 To start moving it, we can publish forward and angular velocities from the terminal or scripts on ros2 topic ' /cmd_cel  '
 
+We can also run the odometry node as starting basis to get odom topic in ros2. 
+```bash
+mkdir -p adir_ws/src
+cd adir_ws/src
+git clone -b ros2-humble https://github.com/AntRobotics-de/adir.git
+cd ..
+colcon build --symlink-install
+```
+
+After succesfully installing we can launcth the odom launch file
+```bash
+ros2 launch odometry test.launch.py
+```
+
+
 ## Additional information
 
 - If using USB cable, please download the adir.sh bash script first and run it using the following commands: 
@@ -40,3 +55,4 @@ sudo ./adir.sh
   Once succesfully run, then we can launch the run files.
 
 - If using CAN by connecting to the given port on ADIR and CAN bus is up & running, then we can straight away launch the scripts. Please note that the bit rate is currently set at 500kbps.
+
