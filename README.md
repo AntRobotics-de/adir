@@ -77,4 +77,5 @@ Topics Available:
 /motor_controller/status                 -  can verify if stall is detected or if ADIR is running on RC/ autonomy commands\
 /motor_controller/fault_state            -  can verify if a situation like overheat, overvoltage, undervoltage, short circuit, emergency stop or mosfet failures happen using boolean\
 /motor_controller/motor*/runtime_status  -  can verify if a situation like motor_stalled, forward_limit_triggered, reverse_limit_triggered, amps_trigger_activated happen using boolean\
+/motor_controller/voltage                -  can verify the voltage of ADIR. Please note if below 21V, please charge the ADIR.
 
