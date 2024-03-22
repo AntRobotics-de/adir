@@ -62,16 +62,11 @@ sudo ./adir.sh
 To start using Adir, you can use the following command:
 
 ```bash
-ros2 launch adir_can_commands adir_interface_launch.py
+ros2 launch odometry adir.launch.py
 ```
 
 To start moving it, we can publish forward and angular velocities from the terminal or scripts on ros2 topic ' /cmd_cel  '
 
-We can also run the odometry node as starting basis to get odom topic in ros2. 
-
-```bash
-ros2 launch odometry test.launch.py
-```
 
 ## Additional information
 
