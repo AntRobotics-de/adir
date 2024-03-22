@@ -74,7 +74,7 @@ To start moving it, we can publish forward and angular velocities from the termi
 
 Topics Available:
 
-/motor_controller/status                 -  can verify if stall is detected or if ADIR is running on RC/ autonomy commands__
-/motor_controller/fault_state            -  can verify if a situation like overheat, overvoltage, undervoltage, short circuit, emergency stop or mosfet failures happen using boolean__
-/motor_controller/motor*/runtime_status  -  can verify if a situation like motor_stalled, forward_limit_triggered, reverse_limit_triggered, amps_trigger_activated happen using boolean__
+/motor_controller/status                 -  can verify if stall is detected or if ADIR is running on RC/ autonomy commands\
+/motor_controller/fault_state            -  can verify if a situation like overheat, overvoltage, undervoltage, short circuit, emergency stop or mosfet failures happen using boolean\
+/motor_controller/motor*/runtime_status  -  can verify if a situation like motor_stalled, forward_limit_triggered, reverse_limit_triggered, amps_trigger_activated happen using boolean\
 
