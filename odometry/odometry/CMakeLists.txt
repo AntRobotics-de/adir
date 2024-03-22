@@ -22,8 +22,6 @@ include_directories(include)
 
 add_library(${PROJECT_NAME} SHARED src/odometry.cpp)
 
-# Export the library
-ament_export_targets(export_${PROJECT_NAME} HAS_LIBRARY_TARGET)
 
 
 
