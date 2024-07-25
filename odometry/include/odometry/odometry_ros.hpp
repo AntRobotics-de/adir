@@ -4,7 +4,7 @@
 #include "message_filters/subscriber.h"
 #include "message_filters/time_synchronizer.h"
 #include "message_filters/sync_policies/approximate_time.h"
-#include "can_commands_interfaces/msg/stamped_int32.hpp"
+#include "antrobotics_can_commands_interfaces/msg/stamped_int32.hpp"
 #include "realtime_tools/realtime_publisher.h"
 #include "tf2_ros/transform_broadcaster.h"
 #include "diff_drive_controller/odometry.hpp"
@@ -24,7 +24,7 @@ public:
 private:
     diff_drive_controller::Odometry odometry_;
 
-    typedef can_commands_interfaces::msg::StampedInt32 StampedInt32;
+    typedef antrobotics_can_commands_interfaces::msg::StampedInt32 StampedInt32;
     std::shared_ptr<message_filters::Subscriber<StampedInt32>> absolute_encoder1_subscriber_;
     std::shared_ptr<message_filters::Subscriber<StampedInt32>> absolute_encoder2_subscriber_;
     typedef message_filters::sync_policies::ApproximateTime<StampedInt32, StampedInt32> ApproximateSyncPolicy;

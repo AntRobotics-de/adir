@@ -22,7 +22,7 @@ def generate_launch_description():
         executable="component_container",
         composable_node_descriptions=[
             ComposableNode(
-                package="adir_ros_can",
+                package="antrobotics_ros_can",
                 plugin="can::RosCan",
                 name="ros_commands",
                 parameters=[
@@ -33,7 +33,7 @@ def generate_launch_description():
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::VelocityCommands",
                 name="velocity_commands",
                 parameters=[
@@ -49,39 +49,39 @@ def generate_launch_description():
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::EncoderCommands",
                 name="encoder_commands",
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::StatusCommands",
                 name="status_commands",
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::PowerMonitorCommands",
                 name="power_monitor_commands",
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::EncoderRequestCommands",
                 name="encoder_request_commands",
                 parameters=[{"frequency": 10.0}],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::StatusRequestCommands",
                 name="status_request_commands",
                 parameters=[{"frequency": 10.0}],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
-                package="adir_can_commands",
+                package="antrobotics_can_commands",
                 plugin="can_commands::PowerMonitorRequestCommands",
                 name="power_monitor_request_commands",
                 parameters=[{"frequency": 10.0}],
