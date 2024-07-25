@@ -15,8 +15,8 @@ find_package(std_msgs REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
-find_package(ros_can_interfaces REQUIRED)
-find_package(can_commands_interfaces REQUIRED)
+find_package(antrobotics_ros_can_interfaces REQUIRED)
+find_package(antrobotics_can_commands_interfaces REQUIRED)
 find_package(diff_drive_controller REQUIRED)
 find_package(realtime_tools REQUIRED)
 
@@ -29,8 +29,8 @@ ament_target_dependencies(${PROJECT_NAME}
   rcpputils
   nav_msgs
   std_msgs
-  ros_can_interfaces
-  can_commands_interfaces
+  antrobotics_ros_can_interfaces
+  antrobotics_can_commands_interfaces
   tf2_ros
   diff_drive_controller
   realtime_tools
