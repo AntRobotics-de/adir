@@ -11,6 +11,7 @@ wheel_radius = 0.174  # in meters
 max_linear_speed = 5.1  # in meters/second
 max_angular_speed = 3.0  # in radians/second
 radius_compensation = -0.002
+# please refer to: https://ncbi.nlm.nih.gov/pmc/articles/PMC4481911/
 track_width_compensation = 0.92
 
 def generate_launch_description():
@@ -68,23 +69,29 @@ def generate_launch_description():
             ),
             ComposableNode(
                 package="antrobotics_can_commands",
+                plugin="can_commands::ResetEncoderCommands",
+                name="reset_encoder_commands",
+                extra_arguments=[{"use_intra_process_comms": True}],
+            ),
+            ComposableNode(
+                package="antrobotics_can_commands",
                 plugin="can_commands::EncoderRequestCommands",
                 name="encoder_request_commands",
-                parameters=[{"frequency": 10.0}],
+                parameters=[{"frequency": 20.0}],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
                 package="antrobotics_can_commands",
                 plugin="can_commands::StatusRequestCommands",
                 name="status_request_commands",
-                parameters=[{"frequency": 10.0}],
+                parameters=[{"frequency": 2.0}],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
             ComposableNode(
                 package="antrobotics_can_commands",
                 plugin="can_commands::PowerMonitorRequestCommands",
                 name="power_monitor_request_commands",
-                parameters=[{"frequency": 10.0}],
+                parameters=[{"frequency": 2.0}],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
         ],
