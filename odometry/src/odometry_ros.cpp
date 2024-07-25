@@ -16,7 +16,7 @@ OdometryROS::OdometryROS(const rclcpp::NodeOptions &options) : Node("odometry_no
     odometry_.setWheelParams(wheel_separation_, wheel_radius_, wheel_radius_);
     odometry_.setVelocityRollingWindowSize(velocity_rolling_window_size_);
 
-    odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>(odom_frame_id_, 2);
+    odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>("odom", 2);
     realtime_odometry_publisher_ = std::make_shared<realtime_tools::RealtimePublisher<nav_msgs::msg::Odometry>>(odometry_publisher_);
     auto &odometry_message = realtime_odometry_publisher_->msg_;
     odometry_message.header.frame_id = odom_frame_id_;
