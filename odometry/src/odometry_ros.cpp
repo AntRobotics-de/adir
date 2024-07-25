@@ -18,6 +18,9 @@ OdometryROS::OdometryROS(const rclcpp::NodeOptions &options) : Node("odometry_no
 
     odometry_publisher_ = this->create_publisher<nav_msgs::msg::Odometry>(odom_frame_id_, 2);
     realtime_odometry_publisher_ = std::make_shared<realtime_tools::RealtimePublisher<nav_msgs::msg::Odometry>>(odometry_publisher_);
+    auto &odometry_message = realtime_odometry_publisher_->msg_;
+    odometry_message.header.frame_id = odom_frame_id_;
+    odometry_message.child_frame_id = child_frame_id_;
 
     odometry_transform_publisher_ = this->create_publisher<tf2_msgs::msg::TFMessage>("/tf", 2);
     realtime_odometry_transform_publisher_ = std::make_shared<realtime_tools::RealtimePublisher<tf2_msgs::msg::TFMessage>>(odometry_transform_publisher_);
