@@ -12,6 +12,7 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(rcpputils REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
@@ -29,6 +30,7 @@ ament_target_dependencies(${PROJECT_NAME}
   rcpputils
   nav_msgs
   std_msgs
+  std_srvs
   antrobotics_ros_can_interfaces
   antrobotics_can_commands_interfaces
   tf2_ros
