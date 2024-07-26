@@ -77,10 +77,25 @@ To start moving it, we can publish forward and angular velocities from the termi
 
 ### Debug information
 
-Topics Available:
+### Topics Used in This Project
 
-/motor_controller/status                 -  can verify if stall is detected or if ADIR is running on RC/ autonomy commands\
-/motor_controller/fault_state            -  can verify if a situation like overheat, overvoltage, undervoltage, short circuit, emergency stop or mosfet failures happen using boolean\
-/motor_controller/motor*/runtime_status  -  can verify if a situation like motor_stalled, forward_limit_triggered, reverse_limit_triggered, amps_trigger_activated happen using boolean\
-/motor_controller/voltage                -  can verify the voltage of ADIR. Please note if below 21V, please charge the ADIR.
+Below is a list of the topics used in this project along with their respective message types and descriptions.
+
+| Topic Name       | Message Type          | Description                                             |
+| ---------------- | --------------------- | ------------------------------------------------------- |
+| `/adir/odom`     | `nav_msgs/Odometry`     | Publishes the adir odometry information(currently only using wheel encoders)                              |
+| `/cmd_vel`       | `geometry_msgs/Twist` | Subscribes to velocity commands for the robot           |
+| `/motor_controller/voltage  `       | `std_msgs/Float` | Publishes robot voltage. `Please charge when it falls below 23V`           |
+| `/motor_controller/status`       | `ros_can_interfaces/Frame` | Publishes information on serial,pulse or analog mode and stall detection           |
+| `/motor_controller/fault_state`     | `ros_can_interfaces/Frame`     | Publishes information on overheating, undervoltage, overvoltage, shortcircuit, emergency stop, motor sensor setup fault & mosfet failure                             |
+| `/motor_controller/motor*/runtimestatus`     | `ros_can_interfaces/Frame`     | Publishes information on amps limit active, motor stall. loop error detection, safety stop active, forward limit triggered, reverse limit triggered & amps trigger activated                             |
+
+
+
+
+
+
+
+
+
 
