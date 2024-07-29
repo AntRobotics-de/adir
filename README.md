@@ -75,22 +75,30 @@ To start moving it, we can publish forward and angular velocities from the termi
 
 ## Additional information
 
-### Debug information
-
 ### Topics Used in This Project
 
 Below is a list of the topics used in this project along with their respective message types and descriptions.
 
-| Topic Name       | Message Type          | Description                                             |
+| Topic Name (Publishers)       | Message Type          | Description                                             |
 | ---------------- | --------------------- | ------------------------------------------------------- |
 | `/adir/odom`     | `nav_msgs/Odometry`     | Publishes the adir odometry information(currently only using wheel encoders)                              |
-| `/cmd_vel`       | `geometry_msgs/Twist` | Subscribes to velocity commands for the robot           |
 | `/motor_controller/voltage  `       | `std_msgs/Float` | Publishes robot voltage. `Please charge when it falls below 23V`           |
 | `/motor_controller/status`       | `ros_can_interfaces/Frame` | Publishes information on serial,pulse or analog mode and stall detection           |
 | `/motor_controller/fault_state`     | `ros_can_interfaces/Frame`     | Publishes information on overheating, undervoltage, overvoltage, shortcircuit, emergency stop, motor sensor setup fault & mosfet failure                             |
 | `/motor_controller/motor*/runtimestatus`     | `ros_can_interfaces/Frame`     | Publishes information on amps limit active, motor stall. loop error detection, safety stop active, forward limit triggered, reverse limit triggered & amps trigger activated                             |
 
+| Topic Name (Subscribers)      | Message Type          | Description                                             |
+| ---------------- | --------------------- | ------------------------------------------------------- |
+| `/cmd_vel`       | `geometry_msgs/Twist` | Subscribes to velocity commands for the robot           |
 
+
+
+### Services 
+
+
+| Service Name       | Service Type          | Description                                             |
+| ---------------- | --------------------- | ------------------------------------------------------- |
+| `/ResetOdometry`     | `nav_msgs/Odometry`     | Resets the adir wheel odometry                              |                        |
 
 
 
