@@ -98,7 +98,7 @@ Below is a list of the topics used in this project along with their respective m
 
 | Service Name       | Service Type          | Description                                             |
 | ---------------- | --------------------- | ------------------------------------------------------- |
-| `/ResetOdometry`     | `nav_msgs/Odometry`     | Resets the adir wheel odometry                              |                        |
+| `/ResetOdometry`     | `odometry_interfaces/ResetOdometry`     | Resets the adir wheel odometry                              |                        |
 
 
 
