@@ -12,7 +12,8 @@ Welcome to the official repository for Adir, the differential drive robot design
       - [Cloning the Repository](#cloning-the-repository)
   - [Launching Adir](#launching-adir)
   - [Additional information](#additional-information)
-    - [Debug information](#debug-information)
+    - [Topics](#topics)
+    - [Services](#services)
 
 
 
@@ -75,13 +76,13 @@ To start moving it, we can publish forward and angular velocities from the termi
 
 ## Additional information
 
-### Topics Used in This Project
+### Topics
 
 Below is a list of the topics used in this project along with their respective message types and descriptions.
 
 | Topic Name (Publishers)       | Message Type          | Description                                             |
 | ---------------- | --------------------- | ------------------------------------------------------- |
-| `/adir/odom`     | `nav_msgs/Odometry`     | Publishes the adir odometry information(currently only using wheel encoders)                              |
+| `/odom`     | `nav_msgs/Odometry`     | Publishes the adir odometry information(currently only using wheel encoders)                              |
 | `/motor_controller/voltage  `       | `std_msgs/Float` | Publishes robot voltage. `Please charge when it falls below 23V`           |
 | `/motor_controller/status`       | `ros_can_interfaces/Frame` | Publishes information on serial,pulse or analog mode and stall detection           |
 | `/motor_controller/fault_state`     | `ros_can_interfaces/Frame`     | Publishes information on overheating, undervoltage, overvoltage, shortcircuit, emergency stop, motor sensor setup fault & mosfet failure                             |
@@ -98,7 +99,7 @@ Below is a list of the topics used in this project along with their respective m
 
 | Service Name       | Service Type          | Description                                             |
 | ---------------- | --------------------- | ------------------------------------------------------- |
-| `/ResetOdometry`     | `odometry_interfaces/ResetOdometry`     | Resets the adir wheel odometry                              |                        |
+| `/ResetOdometry`     | `std_srvs/Trigger`     | Resets the adir wheel odometry                              |                        |
 
 
 
