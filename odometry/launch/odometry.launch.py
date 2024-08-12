@@ -117,7 +117,7 @@ def generate_launch_description():
                     "wheel_per_side": 2,
                     "publish_rate": 30.0,
                     "publish_odom_tf": True,
-                    "odom_frame_id": "/adir/odom",
+                    "odom_frame_id": "odom",
                 }],
                 extra_arguments=[{"use_intra_process_comms": True}],
             ),
