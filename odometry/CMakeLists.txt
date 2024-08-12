@@ -7,35 +7,38 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp_components REQUIRED)
-find_package(std_msgs REQUIRED)
+
 find_package(rclcpp REQUIRED)
-find_package(odometry_interfaces REQUIRED)
+find_package(rclcpp_components REQUIRED)
+find_package(rcpputils REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(tf2_ros REQUIRED)
-find_package(adir_ros_can_interfaces REQUIRED)
-find_package(adir_can_commands_interfaces REQUIRED)
-find_package(rcpputils REQUIRED)
+find_package(antrobotics_ros_can_interfaces REQUIRED)
+find_package(antrobotics_can_commands_interfaces REQUIRED)
+find_package(diff_drive_controller REQUIRED)
+find_package(realtime_tools REQUIRED)
 
 include_directories(include)
 
-add_library(${PROJECT_NAME} SHARED src/odometry.cpp)
-
-
-
-
+add_library(${PROJECT_NAME} SHARED src/odometry_ros.cpp)
 ament_target_dependencies(${PROJECT_NAME} 
   rclcpp
-  nav_msgs
-  odometry_interfaces
-  std_msgs
   rclcpp_components
-  adir_ros_can_interfaces
-  adir_can_commands_interfaces
+  rcpputils
+  nav_msgs
+  std_msgs
+  std_srvs
+  antrobotics_ros_can_interfaces
+  antrobotics_can_commands_interfaces
   tf2_ros
-  rcpputils)
-rclcpp_components_register_nodes(${PROJECT_NAME} "Odometry")
+  diff_drive_controller
+  realtime_tools
+)
+
+rclcpp_components_register_nodes(${PROJECT_NAME} "OdometryROS")
 
 install(
   DIRECTORY include/

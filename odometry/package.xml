@@ -2,10 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>odometry</name>
-  <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="marmik18@gmail.com">Marmik Thakkar</maintainer>
-  <license>TODO: License declaration</license>
+  <version>1.0.0</version>
+  <description>This package provides a odometry implmentation for the robot adir from AntRobotics.</description>
+  <maintainer email="marmik18@antrobotics.de">Marmik Thakkar</maintainer>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
@@ -15,9 +15,14 @@
   <depend>nav_msgs</depend>
   <depend>tf2_ros</depend>
   <depend>message_filters</depend>
-  <depend>adir_ros_can_interfaces</depend>
-  <depend>adir_can_commands_interfaces</depend>
+  <depend>antrobotics_ros_can_interfaces</depend>
+  <depend>antrobotics_can_commands_interfaces</depend>
   <depend>rcpputils</depend>
+  <depend>std_srvs</depend>
+  <depend>diff_drive_controller</depend>
+  <depend>realtime_tools</depend>
+
+  <exec_depend>antrobotics_can_commands</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
