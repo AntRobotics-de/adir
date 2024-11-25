@@ -1,3 +1,5 @@
+![License GPL](https://img.shields.io/github/license/AntRobotics-de/adir?color=blue)
+
 # Adir
 
 Welcome to the official repository for Adir, the differential drive robot designed for versatile indoor/ outdoor navigation. This README provides instructions on how to get Adir up and running on your system.
