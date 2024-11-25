@@ -1,4 +1,3 @@
-![License GPL](https://img.shields.io/github/license/AntRobotics-de/adir?color=blue)
 
 # Adir
 
