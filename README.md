@@ -24,7 +24,7 @@ Welcome to the official repository for Adir, the differential drive robot design
 
 ## Environment Setup
 - If you are using CAN by connecting to the given port on ADIR and CAN bus is up & running, then we can skip this step. 
-- If you are using USB cable, please download the adir.sh bash script first and run it using the following commands: 
+- If you are using USB cable, please download the [adir.sh](https://github.com/AntRobotics-de/adir/releases/download/v0.0.0/adir.sh) bash script first and run it using the following commands: 
     ```bash
     chmod +x adir.sh
     sudo ./adir.sh
